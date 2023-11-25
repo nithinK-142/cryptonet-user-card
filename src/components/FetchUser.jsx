@@ -5,7 +5,7 @@ const FetchUser = () => {
   const { userData } = useFetchUser();
   return (
     <div>
-      {userData ? (
+      {userData && (
         <UserCard
           first={userData.name.first}
           last={userData.name.last}
@@ -13,8 +13,6 @@ const FetchUser = () => {
           phone={userData.phone}
           picture={userData.picture.large}
         />
-      ) : (
-        <p className="text-2xl text-white">Loading...⌛</p>
       )}
     </div>
   );
