@@ -1,23 +1,22 @@
 import useFetchUser from "../hooks/useFetchUser";
+import Loader from "./Loader";
 import UserCard from "./UserCard";
 
 const FetchUser = () => {
-  const { userData, loading, error } = useFetchUser();
+  const { userData, error } = useFetchUser();
 
-  if (loading) {
-    return (
-      <p>
-        Loading...{" "}
-        <span role="img" aria-label="loading">
-          ⌛
-        </span>
-      </p>
-    );
-  }
-
-  // if (error) {
-  //   console.error("Error fetching user:", error);
+  // if (loading) {
+  //   return (
+  //     // <p>
+  //     //   Loading...{" "}
+  //     //   <span role="img" aria-label="loading">
+  //     //     ⌛
+  //     //   </span>
+  //     // </p>
+  //   );
   // }
+
+  // if (error) console.error("Error fetching user:", error);
 
   return (
     <div>
@@ -30,7 +29,7 @@ const FetchUser = () => {
           picture={userData.picture.large}
         />
       ) : (
-        <p>No user data available</p>
+        <p className="text-2xl text-white">Loading...⌛</p>
       )}
     </div>
   );
