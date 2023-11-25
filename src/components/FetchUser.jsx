@@ -1,23 +1,8 @@
 import useFetchUser from "../hooks/useFetchUser";
-import Loader from "./Loader";
 import UserCard from "./UserCard";
 
 const FetchUser = () => {
-  const { userData, error } = useFetchUser();
-
-  // if (loading) {
-  //   return (
-  //     // <p>
-  //     //   Loading...{" "}
-  //     //   <span role="img" aria-label="loading">
-  //     //     ⌛
-  //     //   </span>
-  //     // </p>
-  //   );
-  // }
-
-  // if (error) console.error("Error fetching user:", error);
-
+  const { userData } = useFetchUser();
   return (
     <div>
       {userData ? (
