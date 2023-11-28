@@ -1,8 +1,12 @@
 import useFetchUser from "../hooks/useFetchUser";
 import UserCard from "./UserCard";
+import SkeletonLoader from "./SkeletonLoader";
 
 const FetchUser = () => {
-  const { userData } = useFetchUser();
+  const { userData, loading } = useFetchUser();
+  
+  if (loading) return <SkeletonLoader />;
+
   return (
     <div>
       {userData && (
