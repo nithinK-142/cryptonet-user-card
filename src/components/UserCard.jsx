@@ -4,9 +4,10 @@ import phonesvg from "../assets/phone.svg";
 
 const UserCard = ({ first, last, gender, phone, picture }) => (
   <div
-    className="w-80 h-[26rem] bg-[#9FB3BA] flex flex-col items-center justify-center rounded-md border border-gray-200"
+    className="w-80 h-[26rem] bg-[#9FB3BA] flex flex-col items-center justify-center rounded-md"
     style={{
-      boxShadow: "0 0 6px 2px #F9F6EE",
+      boxShadow:
+        "rgba(0, 0, 0, 0.24) -10px -6px 8px, rgba(0, 0, 0, 0.24) 10px -6px 8px, rgba(0, 0, 0, 0.24) 0px 10px 8px",
     }}
   >
     <div className="rounded-full">
@@ -26,12 +27,7 @@ const UserCard = ({ first, last, gender, phone, picture }) => (
         <p className="font-semibold">{phone}</p>
       </div>
     </div>
-    <button
-      className="mt-6 p-2 px-6 rounded-lg font-semibold text-white bg-[#851e3e]"
-      style={{
-        boxShadow: "0px 4px 6px black",
-      }}
-    >
+    <button className="mt-6 p-2 px-6 rounded-lg font-semibold text-white bg-[#851e3e]">
       Connect
     </button>
   </div>
